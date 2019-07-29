@@ -1,0 +1,28 @@
+import re
+protocol=["www","http","ftp"]
+domain=["gmail","yahoo","ac"]
+
+
+def nextword(target, source):
+   for i, w in enumerate(source):
+     if w == target:
+         return source[i+1]
+         
+         
+         
+def d(s,do):
+    for i in do:
+        if i in s:
+              return i
+
+def pr(s,pr):
+    for i in pr:
+        if i in s:
+                return i
+
+s=input()
+r = re.findall(r'\w+', s)
+print("<Domain>: ",d(r,domain))
+print("<Protocol>:",pr(r,protocol))
+z=pr(r,protocol)
+print("This is the link:",nextword(z,r))
